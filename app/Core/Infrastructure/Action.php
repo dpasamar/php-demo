@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Core\Infrastructure;
+namespace Core\Infrastructure;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -50,6 +50,7 @@ abstract class Action
     {
         $json = json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         $this->response->getBody()->write($json);
+        return $this->response;
     }
 
     protected function redirect(string $url, array $params = [], int $statusCode = 302): Response

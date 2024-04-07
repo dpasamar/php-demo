@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Core\Infrastructure;
+namespace Core\Infrastructure;
 
 use JsonSerializable;
 

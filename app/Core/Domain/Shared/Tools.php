@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Domain\Shared;
+namespace Core\Domain\Shared;
 
 final class Tools
 {
